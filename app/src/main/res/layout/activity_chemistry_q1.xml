@@ -53,19 +53,20 @@
 
     <Button
         android:id="@+id/bt_nextQ1Chemistry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="143dp"
+        android:layout_height="48dp"
         android:backgroundTint="#ffb300"
         android:onClick="btnClickNext"
         android:text="Next Question"
         android:textColor="#FFFFFF"
+        android:textSize="10sp"
         app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.834" />
+        app:layout_constraintVertical_bias="0.761" />
 
     <RadioGroup
         android:id="@+id/rg_Q1Chemistry"
