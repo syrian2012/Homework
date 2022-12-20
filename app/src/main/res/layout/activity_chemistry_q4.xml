@@ -6,6 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".ChemistryQ4Activity">
 
+    <Button
+        android:id="@+id/bt_nextQ4Chemistry"
+        android:layout_width="143dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#ffb300"
+        android:onClick="btnClickNext"
+        android:text="Next Question"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.764" />
+
+    <Button
+        android:id="@+id/bt_backQ4Chemistry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffb300"
+        android:onClick="btnClickBack"
+        android:text="Previous Question"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.764" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -50,22 +84,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.227" />
-
-    <Button
-        android:id="@+id/bt_nextQ4Chemistry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ffb300"
-        android:onClick="btnClickNext"
-        android:text="Next Question"
-        android:textColor="#FFFFFF"
-        app:iconTint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.834" />
 
     <RadioGroup
         android:id="@+id/rg_Q4Chemistry"
