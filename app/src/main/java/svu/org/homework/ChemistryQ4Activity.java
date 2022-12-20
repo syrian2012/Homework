@@ -17,7 +17,7 @@ public class ChemistryQ4Activity extends AppCompatActivity {
     }
     public void btnClickNext(View V){
         mp.start();
-        Intent i = new Intent(this,ChemistryQ2Activity.class);
+        Intent i = new Intent(this,ChemistryQ5Activity.class);
         startActivity(i);
     }
 }
