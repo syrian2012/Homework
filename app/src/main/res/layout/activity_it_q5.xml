@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ItQ5Activity">
 
-
     <Button
         android:id="@+id/bt_nextQ5It"
         android:layout_width="143dp"

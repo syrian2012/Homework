@@ -7,13 +7,103 @@
     tools:context=".PhysicsQ1Activity">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PhysicsQ1Activity"
-        android:textSize="30sp"
+        android:text="Physics Exam"
+        android:textAlignment="center"
+        android:textColor="#FFB300"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question 1"
+        android:textAlignment="center"
+        android:textColor="#FFB300"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is SSD stands for?"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.227" />
+
+    <Button
+        android:id="@+id/bt_nextQ1Physics"
+        android:layout_width="143dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#ffb300"
+        android:onClick="btnClickNext"
+        android:text="Next Question"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761" />
+
+    <RadioGroup
+        android:id="@+id/rg_Q1Physics"
+        android:layout_width="158dp"
+        android:layout_height="211dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <RadioButton
+            android:id="@+id/rb_Q1RAPhysics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solid State Drive" />
+
+        <RadioButton
+            android:id="@+id/rb_Q1WA2Physics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Smart System Drive" />
+
+        <RadioButton
+            android:id="@+id/rb_Q1WA1Physics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speed System Drive" />
+
+        <RadioButton
+            android:id="@+id/rb_Q1WA3Physics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Other" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
