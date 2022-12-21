@@ -88,16 +88,16 @@
             android:text="Side*2" />
 
         <RadioButton
-            android:id="@+id/rb_Q1RAMath"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Side^2" />
-
-        <RadioButton
             android:id="@+id/rb_Q1WA1Math"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Side/2" />
+
+        <RadioButton
+            android:id="@+id/rb_Q1RAMath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Side^2" />
 
         <RadioButton
             android:id="@+id/rb_Q1WA3Math"
