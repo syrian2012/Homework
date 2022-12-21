@@ -44,7 +44,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="It Exam"
+        android:text="Information Technology Exam"
         android:textAlignment="center"
         android:textColor="#FFB300"
         android:textSize="20sp"
