@@ -6,15 +6,105 @@
     android:layout_height="match_parent"
     tools:context=".MathQ1Activity">
 
+
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MathQ1Activity"
-        android:textSize="30sp"
+        android:text="Math Exam"
+        android:textAlignment="center"
+        android:textColor="#FFB300"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.055" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question 1"
+        android:textAlignment="center"
+        android:textColor="#FFB300"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is the area of square formula?"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.227" />
+
+    <Button
+        android:id="@+id/bt_nextQ1Math"
+        android:layout_width="143dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#ffb300"
+        android:onClick="btnClickNext"
+        android:text="Next Question"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761" />
+
+    <RadioGroup
+        android:id="@+id/rg_Q1Math"
+        android:layout_width="158dp"
+        android:layout_height="211dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <RadioButton
+            android:id="@+id/rb_Q1WA2Math"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Side*2" />
+
+        <RadioButton
+            android:id="@+id/rb_Q1RAMath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Side^2" />
+
+        <RadioButton
+            android:id="@+id/rb_Q1WA1Math"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Side/2" />
+
+        <RadioButton
+            android:id="@+id/rb_Q1WA3Math"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Other" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
