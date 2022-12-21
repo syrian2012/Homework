@@ -74,7 +74,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Which SQL query statement used to add new record in database?"
+        android:text="what is 0 kelvin in celsius?"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -101,19 +101,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="update" />
-
-        <RadioButton
-            android:id="@+id/rb_Q4WA1Physics"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="add" />
+            android:text="-263.25" />
 
         <RadioButton
             android:id="@+id/rb_Q4RAPhysics"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="insert" />
+            android:text="-273.15" />
+
+        <RadioButton
+            android:id="@+id/rb_Q4WA1Physics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+247.18" />
 
         <RadioButton
             android:id="@+id/rb_Q4WA3Physics"

@@ -40,7 +40,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="What is SSD stands for?"
+        android:text="What is the water boiling point?"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -80,23 +80,23 @@
         app:layout_constraintVertical_bias="0.5">
 
         <RadioButton
+            android:id="@+id/rb_Q1WA1Physics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="90°C" />
+
+        <RadioButton
             android:id="@+id/rb_Q1RAPhysics"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Solid State Drive" />
+            android:text="100°C" />
 
         <RadioButton
             android:id="@+id/rb_Q1WA2Physics"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="Smart System Drive" />
-
-        <RadioButton
-            android:id="@+id/rb_Q1WA1Physics"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Speed System Drive" />
+            android:text="120°C" />
 
         <RadioButton
             android:id="@+id/rb_Q1WA3Physics"

@@ -74,7 +74,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Which one of the following is Microsoft mail server?"
+        android:text="Watt is:"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -101,19 +101,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="mysql" />
+            android:text="Volt/Ampere" />
 
         <RadioButton
             android:id="@+id/rb_Q3RAPhysics"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Exchange" />
+            android:text="Volt*Ampere" />
 
         <RadioButton
             android:id="@+id/rb_Q3WA1Physics"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="squid" />
+            android:text="Volt+Ampere" />
 
         <RadioButton
             android:id="@+id/rb_Q3WA3Physics"

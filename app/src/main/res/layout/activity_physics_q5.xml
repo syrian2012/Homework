@@ -74,7 +74,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How many Bytes in 1 Mega Byte?"
+        android:text="Newton’s law says: Force is"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -101,25 +101,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="1000" />
+            android:text="acceleration/mass" />
 
         <RadioButton
             android:id="@+id/rb_Q5WA1Physics"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2000" />
+            android:text="mass/acceleration" />
+
+        <RadioButton
+            android:id="@+id/rb_Q5RAPhysics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mass*acceleration" />
 
         <RadioButton
             android:id="@+id/rb_Q5WA3Physics"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="3000" />
-
-        <RadioButton
-            android:id="@+id/rb_Q5RAPhysics"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="Other" />
     </RadioGroup>
 
