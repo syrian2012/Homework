@@ -80,17 +80,17 @@
         app:layout_constraintVertical_bias="0.5">
 
         <RadioButton
+            android:id="@+id/rb_Q1RAIt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solid State Drive" />
+
+        <RadioButton
             android:id="@+id/rb_Q1WA2It"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:text="Smart System Drive" />
-
-        <RadioButton
-            android:id="@+id/rb_Q1RAIt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Solid State Drive" />
 
         <RadioButton
             android:id="@+id/rb_Q1WA1It"
