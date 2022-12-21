@@ -40,7 +40,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="What is the water's PH?"
+        android:text="What is SSD stands for?"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -52,7 +52,7 @@
         app:layout_constraintVertical_bias="0.227" />
 
     <Button
-        android:id="@+id/bt_nextQ1Chemistry"
+        android:id="@+id/bt_nextQ1It"
         android:layout_width="143dp"
         android:layout_height="48dp"
         android:backgroundTint="#ffb300"
@@ -69,7 +69,7 @@
         app:layout_constraintVertical_bias="0.761" />
 
     <RadioGroup
-        android:id="@+id/rg_Q1Chemistry"
+        android:id="@+id/rg_Q1It"
         android:layout_width="158dp"
         android:layout_height="211dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,26 +80,26 @@
         app:layout_constraintVertical_bias="0.5">
 
         <RadioButton
-            android:id="@+id/rb_Q1WA2Chemistry"
+            android:id="@+id/rb_Q1WA2It"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="8" />
+            android:text="Smart System Drive" />
 
         <RadioButton
-            android:id="@+id/rb_Q1RAChemistry"
+            android:id="@+id/rb_Q1RAIt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="7" />
+            android:text="Solid State Drive" />
 
         <RadioButton
-            android:id="@+id/rb_Q1WA1Chemistry"
+            android:id="@+id/rb_Q1WA1It"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="5" />
+            android:text="Speed System Drive" />
 
         <RadioButton
-            android:id="@+id/rb_Q1WA3Chemistry"
+            android:id="@+id/rb_Q1WA3It"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
