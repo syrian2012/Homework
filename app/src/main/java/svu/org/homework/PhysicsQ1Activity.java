@@ -15,6 +15,8 @@ public class PhysicsQ1Activity extends AppCompatActivity {
     RadioButton rb_Q1WA2Physics;
     RadioButton rb_Q1WA3Physics;
     RadioButton rb_Q1RAPhysics;
+    boolean Q1Answer;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class PhysicsQ1Activity extends AppCompatActivity {
         rb_Q1WA2Physics = findViewById(R.id.rb_Q1WA2Physics);
         rb_Q1WA3Physics = findViewById(R.id.rb_Q1WA3Physics);
         rb_Q1RAPhysics = findViewById(R.id.rb_Q1RAPhysics);
+        username = getIntent().getStringExtra("username");
     }
     public void btnClickNext(View V){
         mp.start();
@@ -33,6 +36,9 @@ public class PhysicsQ1Activity extends AppCompatActivity {
         }
         else {
             Intent i = new Intent(this, PhysicsQ2Activity.class);
+            Q1Answer = rb_Q1RAPhysics.isChecked();
+            i.putExtra("username",username);
+            i.putExtra("Q1Answer", Q1Answer);
             startActivity(i);
         }
     }

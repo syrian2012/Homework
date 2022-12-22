@@ -15,6 +15,9 @@ public class PhysicsQ2Activity extends AppCompatActivity {
     RadioButton rb_Q2WA2Physics;
     RadioButton rb_Q2WA3Physics;
     RadioButton rb_Q2RAPhysics;
+    boolean Q1Answer;
+    boolean Q2Answer;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,8 @@ public class PhysicsQ2Activity extends AppCompatActivity {
         rb_Q2WA2Physics = findViewById(R.id.rb_Q2WA2Physics);
         rb_Q2WA3Physics = findViewById(R.id.rb_Q2WA3Physics);
         rb_Q2RAPhysics = findViewById(R.id.rb_Q2RAPhysics);
+        Q1Answer = getIntent().getBooleanExtra("Q1Answer",false);
+        username = getIntent().getStringExtra("username");
     }
     public void btnClickNext(View V){
         mp.start();
@@ -32,7 +37,11 @@ public class PhysicsQ2Activity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
         }
         else {
+            Q2Answer = rb_Q2RAPhysics.isChecked();
             Intent i = new Intent(this, PhysicsQ3Activity.class);
+            i.putExtra("Q1Answer",Q1Answer);
+            i.putExtra("Q2Answer",Q2Answer);
+            i.putExtra("username",username);
             startActivity(i);
         }
     }
