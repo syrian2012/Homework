@@ -15,6 +15,11 @@ public class ItQ4Activity extends AppCompatActivity {
     RadioButton rb_Q4WA2It;
     RadioButton rb_Q4WA3It;
     RadioButton rb_Q4RAIt;
+    boolean Q1Answer;
+    boolean Q2Answer;
+    boolean Q3Answer;
+    boolean Q4Answer;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,10 @@ public class ItQ4Activity extends AppCompatActivity {
         rb_Q4WA2It = findViewById(R.id.rb_Q4WA2It);
         rb_Q4WA3It = findViewById(R.id.rb_Q4WA3It);
         rb_Q4RAIt = findViewById(R.id.rb_Q4RAIt);
+        Q1Answer = getIntent().getBooleanExtra("Q1Answer",false);
+        Q2Answer = getIntent().getBooleanExtra("Q2Answer",false);
+        Q3Answer = getIntent().getBooleanExtra("Q3Answer",false);
+        username = getIntent().getStringExtra("username");
     }
     public void btnClickNext(View V){
         mp.start();
@@ -32,7 +41,13 @@ public class ItQ4Activity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
         }
         else {
+            Q4Answer = rb_Q4RAIt.isChecked();
             Intent i = new Intent(this, ItQ5Activity.class);
+            i.putExtra("Q1Answer",Q1Answer);
+            i.putExtra("Q2Answer",Q2Answer);
+            i.putExtra("Q3Answer",Q3Answer);
+            i.putExtra("Q4Answer",Q4Answer);
+            i.putExtra("username",username);
             startActivity(i);
         }
     }

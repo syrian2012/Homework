@@ -15,6 +15,8 @@ public class MathQ1Activity extends AppCompatActivity {
     RadioButton rb_Q1WA2Math;
     RadioButton rb_Q1WA3Math;
     RadioButton rb_Q1RAMath;
+    boolean Q1Answer;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class MathQ1Activity extends AppCompatActivity {
         rb_Q1WA2Math = findViewById(R.id.rb_Q1WA2Math);
         rb_Q1WA3Math = findViewById(R.id.rb_Q1WA3Math);
         rb_Q1RAMath = findViewById(R.id.rb_Q1RAMath);
+        username = getIntent().getStringExtra("username");
     }
     public void btnClickNext(View V){
         mp.start();
@@ -33,6 +36,9 @@ public class MathQ1Activity extends AppCompatActivity {
         }
         else {
             Intent i = new Intent(this, MathQ2Activity.class);
+            Q1Answer = rb_Q1RAMath.isChecked();
+            i.putExtra("username",username);
+            i.putExtra("Q1Answer", Q1Answer);
             startActivity(i);
         }
     }

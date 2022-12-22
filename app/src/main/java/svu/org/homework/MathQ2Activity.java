@@ -15,6 +15,9 @@ public class MathQ2Activity extends AppCompatActivity {
     RadioButton rb_Q2WA2Math;
     RadioButton rb_Q2WA3Math;
     RadioButton rb_Q2RAMath;
+    boolean Q1Answer;
+    boolean Q2Answer;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,8 @@ public class MathQ2Activity extends AppCompatActivity {
         rb_Q2WA2Math = findViewById(R.id.rb_Q2WA2Math);
         rb_Q2WA3Math = findViewById(R.id.rb_Q2WA3Math);
         rb_Q2RAMath = findViewById(R.id.rb_Q2RAMath);
+        Q1Answer = getIntent().getBooleanExtra("Q1Answer",false);
+        username = getIntent().getStringExtra("username");
     }
     public void btnClickNext(View V){
         mp.start();
@@ -32,7 +37,11 @@ public class MathQ2Activity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
         }
         else {
+            Q2Answer = rb_Q2RAMath.isChecked();
             Intent i = new Intent(this, MathQ3Activity.class);
+            i.putExtra("Q1Answer",Q1Answer);
+            i.putExtra("Q2Answer",Q2Answer);
+            i.putExtra("username",username);
             startActivity(i);
         }
     }

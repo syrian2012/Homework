@@ -15,6 +15,8 @@ public class ItQ1Activity extends AppCompatActivity {
     RadioButton rb_Q1WA2It;
     RadioButton rb_Q1WA3It;
     RadioButton rb_Q1RAIt;
+    boolean Q1Answer;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class ItQ1Activity extends AppCompatActivity {
         rb_Q1WA2It = findViewById(R.id.rb_Q1WA2It);
         rb_Q1WA3It = findViewById(R.id.rb_Q1WA3It);
         rb_Q1RAIt = findViewById(R.id.rb_Q1RAIt);
+        username = getIntent().getStringExtra("username");
     }
 
     public void btnClickNext(View V){
@@ -34,6 +37,9 @@ public class ItQ1Activity extends AppCompatActivity {
         }
         else {
             Intent i = new Intent(this, ItQ2Activity.class);
+            Q1Answer = rb_Q1RAIt.isChecked();
+            i.putExtra("username",username);
+            i.putExtra("Q1Answer", Q1Answer);
             startActivity(i);
         }
     }
