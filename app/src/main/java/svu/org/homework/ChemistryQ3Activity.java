@@ -15,9 +15,10 @@ public class ChemistryQ3Activity extends AppCompatActivity {
     RadioButton rb_Q3WA2Chemistry;
     RadioButton rb_Q3WA3Chemistry;
     RadioButton rb_Q3RAChemistry;
-    boolean ChemistryQ1Answer;
-    boolean ChemistryQ2Answer;
-    boolean ChemistryQ3Answer;
+    boolean Q1Answer;
+    boolean Q2Answer;
+    boolean Q3Answer;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +29,9 @@ public class ChemistryQ3Activity extends AppCompatActivity {
         rb_Q3WA2Chemistry = findViewById(R.id.rb_Q3WA2Chemistry);
         rb_Q3WA3Chemistry = findViewById(R.id.rb_Q3WA3Chemistry);
         rb_Q3RAChemistry = findViewById(R.id.rb_Q3RAChemistry);
-        ChemistryQ1Answer = getIntent().getBooleanExtra("ChemistryQ1Answer",false);
-        ChemistryQ2Answer = getIntent().getBooleanExtra("ChemistryQ2Answer",false);
+        Q1Answer = getIntent().getBooleanExtra("Q1Answer",false);
+        Q2Answer = getIntent().getBooleanExtra("Q2Answer",false);
+        username = getIntent().getStringExtra("username");
     }
     public void btnClickNext(View V){
         mp.start();
@@ -37,11 +39,12 @@ public class ChemistryQ3Activity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
         }
         else {
-            ChemistryQ3Answer = rb_Q3RAChemistry.isChecked();
+            Q3Answer = rb_Q3RAChemistry.isChecked();
             Intent i = new Intent(this,ChemistryQ4Activity.class);
-            i.putExtra("ChemistryQ1Answer",ChemistryQ1Answer);
-            i.putExtra("ChemistryQ2Answer",ChemistryQ1Answer);
-            i.putExtra("ChemistryQ3Answer",ChemistryQ1Answer);
+            i.putExtra("ChemistryQ1Answer",Q1Answer);
+            i.putExtra("ChemistryQ2Answer",Q2Answer);
+            i.putExtra("ChemistryQ3Answer",Q3Answer);
+            i.putExtra("username",username);
             startActivity(i);
         }
     }

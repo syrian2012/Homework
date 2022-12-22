@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ChemistryQ1Activity extends AppCompatActivity {
@@ -15,7 +17,9 @@ public class ChemistryQ1Activity extends AppCompatActivity {
     RadioButton rb_Q1WA2Chemistry;
     RadioButton rb_Q1WA3Chemistry;
     RadioButton rb_Q1RAChemistry;
-    boolean ChemistryQ1Answer;
+    boolean Q1Answer;
+    String username;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,8 @@ public class ChemistryQ1Activity extends AppCompatActivity {
         rb_Q1WA2Chemistry = findViewById(R.id.rb_Q1WA2Chemistry);
         rb_Q1WA3Chemistry = findViewById(R.id.rb_Q1WA3Chemistry);
         rb_Q1RAChemistry = findViewById(R.id.rb_Q1RAChemistry);
+        username = getIntent().getStringExtra("username");
+
     }
 
     public void btnClickNext(View V){
@@ -35,8 +41,9 @@ public class ChemistryQ1Activity extends AppCompatActivity {
         }
         else {
         Intent i = new Intent(this,ChemistryQ2Activity.class);
-            ChemistryQ1Answer = rb_Q1RAChemistry.isChecked();
-            i.putExtra("ChemistryQ1Answer", ChemistryQ1Answer);
+            Q1Answer = rb_Q1RAChemistry.isChecked();
+            i.putExtra("username",username);
+            i.putExtra("Q1Answer", Q1Answer);
         startActivity(i);}
     }
 }

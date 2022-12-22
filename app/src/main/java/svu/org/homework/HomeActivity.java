@@ -18,13 +18,15 @@ import android.widget.Toast;
 public class HomeActivity extends AppCompatActivity {
     MediaPlayer mp;
     TextView tv_welcome;
+    String username;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         mp = MediaPlayer.create(this, R.raw.soho);
+        username = getIntent().getStringExtra("username");
         tv_welcome = findViewById(R.id.tv_welcome);
-        String username = getIntent().getStringExtra("username");
         tv_welcome.setText("Welcome"+" "+ username );
     }
 
@@ -58,18 +60,22 @@ public class HomeActivity extends AppCompatActivity {
         switch (exam){
             case "Math":
                 Intent m = new Intent(this,MathQ1Activity.class);
+                m.putExtra("username",username);
                 startActivity(m);
                 break;
             case "Chemistry":
                 Intent c = new Intent(this,ChemistryQ1Activity.class);
+                c.putExtra("username",username);
                 startActivity(c);
                 break;
             case "IT":
                 Intent i = new Intent(this,ItQ1Activity.class);
+                i.putExtra("username",username);
                 startActivity(i);
                 break;
             case "Physics":
                 Intent p = new Intent(this,PhysicsQ1Activity.class);
+                p.putExtra("username",username);
                 startActivity(p);
                 break;
 

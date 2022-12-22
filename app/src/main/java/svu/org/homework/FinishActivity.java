@@ -13,6 +13,8 @@ public class FinishActivity extends AppCompatActivity {
     boolean Q3Answer;
     boolean Q4Answer;
     boolean Q5Answer;
+    String username;
+    String Type;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -20,6 +22,9 @@ public class FinishActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_finish);
         TextView tv_result= findViewById(R.id.tv_showresult);
+        TextView tv_username= findViewById(R.id.tv_showusername);
+        username = getIntent().getStringExtra("username");
+        Type = getIntent().getStringExtra("Type");
         Q1Answer = getIntent().getBooleanExtra("Q1Answer",false);
         Q2Answer = getIntent().getBooleanExtra("Q2Answer",false);
         Q3Answer = getIntent().getBooleanExtra("Q3Answer",false);
@@ -31,6 +36,7 @@ public class FinishActivity extends AppCompatActivity {
         if(Q3Answer) result += 20;
         if(Q4Answer) result += 20;
         if(Q5Answer) result += 20;
-        tv_result.setText(Integer.toString(result));
+        tv_result.setText("Your degree is "+result+" of 100");
+        tv_username.setText(Type+ "'s exam has been finished "+ username);
     }
 }
