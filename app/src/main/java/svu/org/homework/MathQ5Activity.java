@@ -21,11 +21,13 @@ public class MathQ5Activity extends AppCompatActivity {
     boolean Q4Answer;
     boolean Q5Answer;
     String username;
+    boolean sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_q5);
+        sound = false;
         mp = MediaPlayer.create(this, R.raw.soho);
         rb_Q5WA1Math = findViewById(R.id.rb_Q5WA1Math);
         rb_Q5WA2Math = findViewById(R.id.rb_Q5WA2Math);
@@ -38,7 +40,8 @@ public class MathQ5Activity extends AppCompatActivity {
         username = getIntent().getStringExtra("username");
     }
     public void btnClickBack(View V){
-        mp.start();
+        if(sound){
+        mp.start();}
         if (!rb_Q5WA1Math.isChecked()&&!rb_Q5WA2Math.isChecked()&&!rb_Q5WA3Math.isChecked()&&!rb_Q5RAMath.isChecked()){
             Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
         }
@@ -48,7 +51,8 @@ public class MathQ5Activity extends AppCompatActivity {
         }
     }
     public void btnClickFinish(View V){
-        mp.start();
+        if(sound){
+        mp.start();}
         if (!rb_Q5WA1Math.isChecked()&&!rb_Q5WA2Math.isChecked()&&!rb_Q5WA3Math.isChecked()&&!rb_Q5RAMath.isChecked()){
             Toast.makeText(getApplicationContext(),"Please choose an answer to finish exam",Toast.LENGTH_LONG).show();
         }

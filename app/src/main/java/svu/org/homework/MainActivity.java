@@ -13,15 +13,19 @@ public class MainActivity extends AppCompatActivity {
     EditText et_username;
     EditText et_password;
     MediaPlayer mp;
+    boolean sound;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sound = true;
         mp = MediaPlayer.create(this, R.raw.soho);
     }
 
     public void onClickLogin(View v){
-        mp.start();
+        if(sound){
+        mp.start();}
         et_username = findViewById(R.id.et_username);
         et_password = findViewById(R.id.et_password);
         if ((et_password.getText().toString()).equals("12345") && !et_username.getText().toString().isEmpty()){

@@ -17,11 +17,13 @@ public class ItQ1Activity extends AppCompatActivity {
     RadioButton rb_Q1RAIt;
     boolean Q1Answer;
     String username;
+    boolean sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_it_q1);
+        sound = false;
         mp = MediaPlayer.create(this, R.raw.soho);
         rb_Q1WA1It = findViewById(R.id.rb_Q1WA1It);
         rb_Q1WA2It = findViewById(R.id.rb_Q1WA2It);
@@ -31,7 +33,8 @@ public class ItQ1Activity extends AppCompatActivity {
     }
 
     public void btnClickNext(View V){
-        mp.start();
+        if(sound){
+        mp.start();}
         if (!rb_Q1WA1It.isChecked()&&!rb_Q1WA2It.isChecked()&&!rb_Q1WA3It.isChecked()&&!rb_Q1RAIt.isChecked()){
             Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
         }

@@ -19,11 +19,13 @@ public class ItQ3Activity extends AppCompatActivity {
     boolean Q2Answer;
     boolean Q3Answer;
     String username;
+    boolean sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_it_q3);
+        sound = false;
         mp = MediaPlayer.create(this, R.raw.soho);
         rb_Q3WA1It = findViewById(R.id.rb_Q3WA1It);
         rb_Q3WA2It = findViewById(R.id.rb_Q3WA2It);
@@ -34,7 +36,8 @@ public class ItQ3Activity extends AppCompatActivity {
         username = getIntent().getStringExtra("username");
     }
     public void btnClickNext(View V){
-        mp.start();
+        if(sound){
+        mp.start();}
         if (!rb_Q3WA1It.isChecked()&&!rb_Q3WA2It.isChecked()&&!rb_Q3WA3It.isChecked()&&!rb_Q3RAIt.isChecked()){
             Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
         }
@@ -49,7 +52,8 @@ public class ItQ3Activity extends AppCompatActivity {
         }
     }
     public void btnClickBack(View V){
-        mp.start();
+        if(sound){
+        mp.start();}
         if (!rb_Q3WA1It.isChecked()&&!rb_Q3WA2It.isChecked()&&!rb_Q3WA3It.isChecked()&&!rb_Q3RAIt.isChecked()){
             Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
         }

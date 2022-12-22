@@ -20,11 +20,13 @@ public class MathQ4Activity extends AppCompatActivity {
     boolean Q3Answer;
     boolean Q4Answer;
     String username;
+    boolean sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_q4);
+        sound = true;
         mp = MediaPlayer.create(this, R.raw.soho);
         rb_Q4WA1Math = findViewById(R.id.rb_Q4WA1Math);
         rb_Q4WA2Math = findViewById(R.id.rb_Q4WA2Math);
@@ -36,7 +38,8 @@ public class MathQ4Activity extends AppCompatActivity {
         username = getIntent().getStringExtra("username");
     }
     public void btnClickNext(View V){
-        mp.start();
+        if(sound){
+        mp.start();}
         if (!rb_Q4WA1Math.isChecked()&&!rb_Q4WA2Math.isChecked()&&!rb_Q4WA3Math.isChecked()&&!rb_Q4RAMath.isChecked()){
             Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
         }
@@ -52,7 +55,8 @@ public class MathQ4Activity extends AppCompatActivity {
         }
     }
     public void btnClickBack(View V){
-        mp.start();
+        if(sound){
+        mp.start();}
         if (!rb_Q4WA1Math.isChecked()&&!rb_Q4WA2Math.isChecked()&&!rb_Q4WA3Math.isChecked()&&!rb_Q4RAMath.isChecked()){
             Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
         }

@@ -17,11 +17,13 @@ public class PhysicsQ1Activity extends AppCompatActivity {
     RadioButton rb_Q1RAPhysics;
     boolean Q1Answer;
     String username;
+    boolean sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_physics_q1);
+        sound = true;
         mp = MediaPlayer.create(this, R.raw.soho);
         rb_Q1WA1Physics = findViewById(R.id.rb_Q1WA1Physics);
         rb_Q1WA2Physics = findViewById(R.id.rb_Q1WA2Physics);
@@ -30,7 +32,8 @@ public class PhysicsQ1Activity extends AppCompatActivity {
         username = getIntent().getStringExtra("username");
     }
     public void btnClickNext(View V){
-        mp.start();
+        if(sound){
+        mp.start();}
         if (!rb_Q1WA1Physics.isChecked()&&!rb_Q1WA2Physics.isChecked()&&!rb_Q1WA3Physics.isChecked()&&!rb_Q1RAPhysics.isChecked()){
             Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
         }

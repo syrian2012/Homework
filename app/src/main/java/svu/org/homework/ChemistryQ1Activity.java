@@ -25,15 +25,13 @@ public class ChemistryQ1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chemistry_q1);
-        if (sound) {
-            mp = MediaPlayer.create(this, R.raw.soho);
-        }
+        sound=false;
+        mp = MediaPlayer.create(this, R.raw.soho);
         rb_Q1WA1Chemistry = findViewById(R.id.rb_Q1WA1Chemistry);
         rb_Q1WA2Chemistry = findViewById(R.id.rb_Q1WA2Chemistry);
         rb_Q1WA3Chemistry = findViewById(R.id.rb_Q1WA3Chemistry);
         rb_Q1RAChemistry = findViewById(R.id.rb_Q1RAChemistry);
         username = getIntent().getStringExtra("username");
-        sound=false;
     }
 
     public void btnClickNext(View V){

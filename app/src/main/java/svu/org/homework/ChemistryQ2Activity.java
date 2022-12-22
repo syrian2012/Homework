@@ -18,11 +18,13 @@ public class ChemistryQ2Activity extends AppCompatActivity {
     boolean Q1Answer;
     boolean Q2Answer;
     String username;
+    boolean sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chemistry_q2);
+        sound = true;
         mp = MediaPlayer.create(this, R.raw.soho);
         rb_Q2WA1Chemistry = findViewById(R.id.rb_Q2WA1Chemistry);
         rb_Q2WA2Chemistry = findViewById(R.id.rb_Q2WA2Chemistry);
@@ -32,7 +34,8 @@ public class ChemistryQ2Activity extends AppCompatActivity {
         username = getIntent().getStringExtra("username");
     }
     public void btnClickNext(View V){
-        mp.start();
+        if(sound){
+        mp.start();}
         if(!rb_Q2WA1Chemistry.isChecked()&&!rb_Q2WA2Chemistry.isChecked()&&!rb_Q2WA3Chemistry.isChecked()&&!rb_Q2RAChemistry.isChecked()){
             Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
         }
@@ -46,7 +49,8 @@ public class ChemistryQ2Activity extends AppCompatActivity {
         }
     }
     public void btnClickBack(View V){
-        mp.start();
+        if(sound){
+        mp.start();}
         if(!rb_Q2WA1Chemistry.isChecked()&&!rb_Q2WA2Chemistry.isChecked()&&!rb_Q2WA3Chemistry.isChecked()&&!rb_Q2RAChemistry.isChecked()){
             Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
         }

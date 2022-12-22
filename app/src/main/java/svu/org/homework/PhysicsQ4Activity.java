@@ -20,11 +20,13 @@ public class PhysicsQ4Activity extends AppCompatActivity {
     boolean Q3Answer;
     boolean Q4Answer;
     String username;
+    boolean sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_physics_q4);
+        sound = true;
         mp = MediaPlayer.create(this, R.raw.soho);
         rb_Q4WA1Physics = findViewById(R.id.rb_Q4WA1Physics);
         rb_Q4WA2Physics = findViewById(R.id.rb_Q4WA2Physics);
@@ -36,7 +38,8 @@ public class PhysicsQ4Activity extends AppCompatActivity {
         username = getIntent().getStringExtra("username");
     }
     public void btnClickNext(View V){
-        mp.start();
+        if(sound){
+        mp.start();}
         if (!rb_Q4WA1Physics.isChecked()&&!rb_Q4WA2Physics.isChecked()&&!rb_Q4WA3Physics.isChecked()&&!rb_Q4RAPhysics.isChecked()){
             Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
         }
@@ -52,7 +55,8 @@ public class PhysicsQ4Activity extends AppCompatActivity {
         }
     }
     public void btnClickBack(View V){
-        mp.start();
+        if(sound){
+        mp.start();}
         if (!rb_Q4WA1Physics.isChecked()&&!rb_Q4WA2Physics.isChecked()&&!rb_Q4WA3Physics.isChecked()&&!rb_Q4RAPhysics.isChecked()){
             Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
         }

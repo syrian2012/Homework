@@ -19,11 +19,13 @@ public class HomeActivity extends AppCompatActivity {
     MediaPlayer mp;
     TextView tv_welcome;
     String username;
+    boolean sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        sound = true;
         mp = MediaPlayer.create(this, R.raw.soho);
         username = getIntent().getStringExtra("username");
         tv_welcome = findViewById(R.id.tv_welcome);
@@ -54,7 +56,8 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void onClickExam(View v){
-        mp.start();
+        if(sound){
+        mp.start();}
         Button bt = (Button) v;
         String exam = bt.getText().toString();
         switch (exam){
