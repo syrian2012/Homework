@@ -41,9 +41,9 @@ public class ChemistryQ3Activity extends AppCompatActivity {
         else {
             Q3Answer = rb_Q3RAChemistry.isChecked();
             Intent i = new Intent(this,ChemistryQ4Activity.class);
-            i.putExtra("ChemistryQ1Answer",Q1Answer);
-            i.putExtra("ChemistryQ2Answer",Q2Answer);
-            i.putExtra("ChemistryQ3Answer",Q3Answer);
+            i.putExtra("Q1Answer",Q1Answer);
+            i.putExtra("Q2Answer",Q2Answer);
+            i.putExtra("Q3Answer",Q3Answer);
             i.putExtra("username",username);
             startActivity(i);
         }
