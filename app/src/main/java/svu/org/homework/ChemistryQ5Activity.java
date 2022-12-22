@@ -2,7 +2,9 @@ package svu.org.homework;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -22,12 +24,14 @@ public class ChemistryQ5Activity extends AppCompatActivity {
     boolean Q5Answer;
     String username;
     boolean sound;
+    SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chemistry_q5);
-        sound = false;
+        sp = getSharedPreferences("Settings", Context.MODE_PRIVATE);
+        sound = sp.getBoolean("Sound",true);
         mp = MediaPlayer.create(this, R.raw.soho);
         rb_Q5WA1Chemistry = findViewById(R.id.rb_Q5WA1Chemistry);
         rb_Q5WA2Chemistry = findViewById(R.id.rb_Q5WA2Chemistry);

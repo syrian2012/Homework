@@ -2,7 +2,9 @@ package svu.org.homework;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -21,12 +23,14 @@ public class ItQ4Activity extends AppCompatActivity {
     boolean Q4Answer;
     String username;
     boolean sound;
+    SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_it_q4);
-        sound = true;
+        sp = getSharedPreferences("Settings", Context.MODE_PRIVATE);
+        sound = sp.getBoolean("Sound",true);
         mp = MediaPlayer.create(this, R.raw.soho);
         rb_Q4WA1It = findViewById(R.id.rb_Q4WA1It);
         rb_Q4WA2It = findViewById(R.id.rb_Q4WA2It);

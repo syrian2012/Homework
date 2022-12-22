@@ -2,7 +2,9 @@ package svu.org.homework;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -20,12 +22,14 @@ public class MathQ3Activity extends AppCompatActivity {
     boolean Q3Answer;
     String username;
     boolean sound;
+    SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_q3);
-        sound = true;
+        sp = getSharedPreferences("Settings", Context.MODE_PRIVATE);
+        sound = sp.getBoolean("Sound",true);
         mp = MediaPlayer.create(this, R.raw.soho);
         rb_Q3WA1Math = findViewById(R.id.rb_Q3WA1Math);
         rb_Q3WA2Math = findViewById(R.id.rb_Q3WA2Math);

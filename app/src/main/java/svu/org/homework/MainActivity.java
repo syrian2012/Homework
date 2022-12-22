@@ -2,7 +2,9 @@ package svu.org.homework;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -14,12 +16,14 @@ public class MainActivity extends AppCompatActivity {
     EditText et_password;
     MediaPlayer mp;
     boolean sound;
+    SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        sound = true;
+        sp = getSharedPreferences("Settings", Context.MODE_PRIVATE);
+        sound = sp.getBoolean("Sound",true);
         mp = MediaPlayer.create(this, R.raw.soho);
     }
 
