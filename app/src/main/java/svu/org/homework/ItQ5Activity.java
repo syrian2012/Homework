@@ -39,7 +39,7 @@ public class ItQ5Activity extends AppCompatActivity {
     public void btnClickFinish(View V){
         mp.start();
             if (!rb_Q5WA1It.isChecked()&&!rb_Q5WA2It.isChecked()&&!rb_Q5WA3It.isChecked()&&!rb_Q5RAIt.isChecked()){
-                Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Please choose an answer to finish exam",Toast.LENGTH_LONG).show();
             }
             else {
                 Intent i = new Intent(this, FinishActivity.class);
