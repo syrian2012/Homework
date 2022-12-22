@@ -15,6 +15,7 @@ public class ChemistryQ1Activity extends AppCompatActivity {
     RadioButton rb_Q1WA2Chemistry;
     RadioButton rb_Q1WA3Chemistry;
     RadioButton rb_Q1RAChemistry;
+    boolean ChemistryQ1Answer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,8 @@ public class ChemistryQ1Activity extends AppCompatActivity {
         }
         else {
         Intent i = new Intent(this,ChemistryQ2Activity.class);
+            ChemistryQ1Answer = rb_Q1RAChemistry.isChecked();
+            i.putExtra("ChemistryQ1Answer", ChemistryQ1Answer);
         startActivity(i);}
     }
 }
