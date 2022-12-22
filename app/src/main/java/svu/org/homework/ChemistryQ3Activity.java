@@ -66,4 +66,9 @@ public class ChemistryQ3Activity extends AppCompatActivity {
             startActivity(i);
         }
     }
+    public void rb_choose(View v){
+        if(sound){
+            mp.start();
+        }
+    }
 }

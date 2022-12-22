@@ -65,4 +65,9 @@ public class PhysicsQ3Activity extends AppCompatActivity {
                 Intent i = new Intent(this, PhysicsQ2Activity.class);
                 startActivity(i);
             }
-}}
+}
+    public void rb_choose(View v){
+        if(sound){
+            mp.start();
+        }
+    }}

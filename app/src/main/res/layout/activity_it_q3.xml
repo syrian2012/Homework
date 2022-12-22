@@ -101,18 +101,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
+            android:onClick="rb_choose"
             android:text="mysql" />
 
         <RadioButton
             android:id="@+id/rb_Q3RAIt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="rb_choose"
             android:text="Exchange" />
 
         <RadioButton
             android:id="@+id/rb_Q3WA1It"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="rb_choose"
             android:text="squid" />
 
         <RadioButton
@@ -120,6 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
+            android:onClick="rb_choose"
             android:text="Other" />
     </RadioGroup>
 

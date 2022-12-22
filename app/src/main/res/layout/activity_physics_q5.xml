@@ -101,18 +101,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
+            android:onClick="rb_choose"
             android:text="acceleration/mass" />
 
         <RadioButton
             android:id="@+id/rb_Q5WA1Physics"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="rb_choose"
             android:text="mass/acceleration" />
 
         <RadioButton
             android:id="@+id/rb_Q5RAPhysics"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="rb_choose"
             android:text="mass*acceleration" />
 
         <RadioButton
@@ -120,6 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
+            android:onClick="rb_choose"
             android:text="Other" />
     </RadioGroup>
 

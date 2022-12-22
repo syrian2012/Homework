@@ -100,12 +100,14 @@
             android:id="@+id/rb_Q4RAMath"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="rb_choose"
             android:text="π*radius^2" />
 
         <RadioButton
             android:id="@+id/rb_Q4WA1Math"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="rb_choose"
             android:text="2π*radius" />
 
         <RadioButton
@@ -113,6 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
+            android:onClick="rb_choose"
             android:text="π*radius" />
 
         <RadioButton
@@ -120,6 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
+            android:onClick="rb_choose"
             android:text="Other" />
     </RadioGroup>
 

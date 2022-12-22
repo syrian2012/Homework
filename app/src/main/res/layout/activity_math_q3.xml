@@ -100,12 +100,14 @@
             android:id="@+id/rb_Q3WA1Math"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="rb_choose"
             android:text="Sum of total numbers multiply by the number of values." />
 
         <RadioButton
             android:id="@+id/rb_Q3RAMath"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="rb_choose"
             android:text="Sum of total numbers divided by the number of values." />
 
         <RadioButton
@@ -113,6 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
+            android:onClick="rb_choose"
             android:text="Sum of total numbers" />
 
         <RadioButton
@@ -120,6 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
+            android:onClick="rb_choose"
             android:text="Other" />
     </RadioGroup>
 

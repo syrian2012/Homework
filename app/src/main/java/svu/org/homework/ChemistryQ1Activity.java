@@ -13,6 +13,8 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.concurrent.ConcurrentLinkedDeque;
+
 public class ChemistryQ1Activity extends AppCompatActivity {
     MediaPlayer mp;
     RadioButton rb_Q1WA1Chemistry;
@@ -36,6 +38,11 @@ public class ChemistryQ1Activity extends AppCompatActivity {
         rb_Q1WA3Chemistry = findViewById(R.id.rb_Q1WA3Chemistry);
         rb_Q1RAChemistry = findViewById(R.id.rb_Q1RAChemistry);
         username = getIntent().getStringExtra("username");
+    }
+    public void rb_choose(View v){
+        if(sound){
+            mp.start();
+        }
     }
 
     public void btnClickNext(View V){

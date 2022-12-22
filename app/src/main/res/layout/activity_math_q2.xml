@@ -101,12 +101,14 @@
             android:id="@+id/rb_Q2RAMath"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="rb_choose"
             android:text="Opposite side/Hypotenuse" />
 
         <RadioButton
             android:id="@+id/rb_Q2WA1Math"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="rb_choose"
             android:text="Opposite side/Adjacent side" />
 
         <RadioButton
@@ -114,6 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
+            android:onClick="rb_choose"
             android:text="Adjacent side/Hypotenuse" />
 
         <RadioButton
@@ -121,6 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
+            android:onClick="rb_choose"
             android:text="Other" />
     </RadioGroup>
 

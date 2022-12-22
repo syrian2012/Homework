@@ -83,6 +83,7 @@
             android:id="@+id/rb_Q1RAIt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="rb_choose"
             android:text="Solid State Drive" />
 
         <RadioButton
@@ -90,12 +91,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
+            android:onClick="rb_choose"
             android:text="Smart System Drive" />
 
         <RadioButton
             android:id="@+id/rb_Q1WA1It"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="rb_choose"
             android:text="Speed System Drive" />
 
         <RadioButton
@@ -103,6 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
+            android:onClick="rb_choose"
             android:text="Other" />
     </RadioGroup>
 
