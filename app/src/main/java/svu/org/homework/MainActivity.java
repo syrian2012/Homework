@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     MediaPlayer mp;
     boolean sound;
     SharedPreferences sp;
+    Button bt_tip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,15 @@ public class MainActivity extends AppCompatActivity {
         sp = getSharedPreferences("Settings", Context.MODE_PRIVATE);
         sound = sp.getBoolean("Sound",true);
         mp = MediaPlayer.create(this, R.raw.soho);
+        bt_tip = findViewById(R.id.bt_tip);
+        bt_tip.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Toast.makeText(getApplicationContext(),"Any username will works with only '12345' password",Toast.LENGTH_LONG).show();
+            }
+        });
     }
+
 
     public void onClickLogin(View v){
         if(sound){
