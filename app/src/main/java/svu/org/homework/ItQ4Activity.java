@@ -66,7 +66,8 @@ public class ItQ4Activity extends AppCompatActivity {
         }
         else {
             Intent i = new Intent(this, ItQ3Activity.class);
-            startActivity(i);
+            setResult(RESULT_OK,i);
+            finish();
         }
     }
     public void rb_choose(View v){

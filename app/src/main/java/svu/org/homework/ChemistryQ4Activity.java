@@ -66,7 +66,8 @@ public class ChemistryQ4Activity extends AppCompatActivity {
         }
         else {
             Intent i = new Intent(this, ChemistryQ3Activity.class);
-            startActivity(i);
+            setResult(RESULT_OK,i);
+            finish();
         }
     }
     public void rb_choose(View v){

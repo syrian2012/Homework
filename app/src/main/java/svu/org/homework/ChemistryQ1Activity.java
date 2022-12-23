@@ -1,5 +1,7 @@
 package svu.org.homework;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -10,10 +12,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
-import android.widget.TextView;
+import android.widget.RadioGroup;
 import android.widget.Toast;
-
-import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class ChemistryQ1Activity extends AppCompatActivity {
     MediaPlayer mp;
@@ -39,6 +39,8 @@ public class ChemistryQ1Activity extends AppCompatActivity {
         rb_Q1RAChemistry = findViewById(R.id.rb_Q1RAChemistry);
         username = getIntent().getStringExtra("username");
     }
+
+
     public void rb_choose(View v){
         if(sound){
             mp.start();
@@ -56,6 +58,7 @@ public class ChemistryQ1Activity extends AppCompatActivity {
             Q1Answer = rb_Q1RAChemistry.isChecked();
             i.putExtra("username",username);
             i.putExtra("Q1Answer", Q1Answer);
-        startActivity(i);}
+        startActivity(i);
+        }
     }
 }

@@ -51,7 +51,8 @@ public class MathQ5Activity extends AppCompatActivity {
         }
         else {
             Intent i = new Intent(this, MathQ4Activity.class);
-            startActivity(i);
+            setResult(RESULT_OK,i);
+            finish();
         }
     }
     public void btnClickFinish(View V){

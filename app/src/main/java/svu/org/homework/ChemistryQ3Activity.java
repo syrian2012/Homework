@@ -63,7 +63,8 @@ public class ChemistryQ3Activity extends AppCompatActivity {
         }
         else {
             Intent i = new Intent(this, ChemistryQ2Activity.class);
-            startActivity(i);
+            setResult(RESULT_OK,i);
+            finish();
         }
     }
     public void rb_choose(View v){

@@ -63,7 +63,8 @@ public class PhysicsQ3Activity extends AppCompatActivity {
             }
             else {
                 Intent i = new Intent(this, PhysicsQ2Activity.class);
-                startActivity(i);
+                setResult(RESULT_OK,i);
+                finish();
             }
 }
     public void rb_choose(View v){

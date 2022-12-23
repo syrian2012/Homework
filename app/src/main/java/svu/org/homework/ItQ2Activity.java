@@ -60,7 +60,8 @@ public class ItQ2Activity extends AppCompatActivity {
         }
         else {
             Intent i = new Intent(this, ItQ1Activity.class);
-            startActivity(i);
+            setResult(RESULT_OK,i);
+            finish();
         }
     }
     public void rb_choose(View v){

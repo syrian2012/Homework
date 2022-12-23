@@ -1,7 +1,10 @@
 package svu.org.homework;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,6 +12,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class ChemistryQ2Activity extends AppCompatActivity {
@@ -22,6 +26,7 @@ public class ChemistryQ2Activity extends AppCompatActivity {
     String username;
     boolean sound;
     SharedPreferences sp;
+    String selected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +42,9 @@ public class ChemistryQ2Activity extends AppCompatActivity {
         Q1Answer = getIntent().getBooleanExtra("Q1Answer",false);
         username = getIntent().getStringExtra("username");
     }
+
+
+
     public void btnClickNext(View V){
         if(sound){
         mp.start();}
@@ -60,7 +68,8 @@ public class ChemistryQ2Activity extends AppCompatActivity {
         }
         else {
             Intent i = new Intent(this, ChemistryQ1Activity.class);
-            startActivity(i);
+            setResult(RESULT_OK,i);
+            finish();
         }
     }
     public void rb_choose(View v){
