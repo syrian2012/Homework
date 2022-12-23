@@ -9,7 +9,7 @@
     tools:context=".ChemistryQ3Activity">
 
     <Button
-        android:id="@+id/bt_backQ3Chemistry2"
+        android:id="@+id/bt_backQ3Chemistry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#ffb300"
@@ -19,14 +19,14 @@
         android:textSize="10sp"
         app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/bt_nextQ3Chemistry2"
+        app:layout_constraintEnd_toStartOf="@+id/bt_nextQ3Chemistry"
         app:layout_constraintHorizontal_bias="0.671"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.764" />
 
     <Button
-        android:id="@+id/bt_nextQ3Chemistry2"
+        android:id="@+id/bt_nextQ3Chemistry"
         android:layout_width="143dp"
         android:layout_height="48dp"
         android:backgroundTint="#ffb300"
