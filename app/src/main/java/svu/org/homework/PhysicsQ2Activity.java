@@ -55,14 +55,9 @@ public class PhysicsQ2Activity extends AppCompatActivity {
     public void btnClickBack(View V){
         if(sound){
         mp.start();}
-            if (!rb_Q2WA1Physics.isChecked()&&!rb_Q2WA2Physics.isChecked()&&!rb_Q2WA3Physics.isChecked()&&!rb_Q2RAPhysics.isChecked()){
-                Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
-            }
-            else {
                 Intent i = new Intent(this, PhysicsQ1Activity.class);
                 setResult(RESULT_OK,i);
                 finish();
-            }
     }
     public void rb_choose(View v){
         if(sound){

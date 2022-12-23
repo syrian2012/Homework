@@ -61,14 +61,9 @@ public class ChemistryQ4Activity extends AppCompatActivity {
     public void btnClickBack(View V){
         if(sound){
         mp.start();}
-        if(!rb_Q4WA1Chemistry.isChecked()&&!rb_Q4WA2Chemistry.isChecked()&&!rb_Q4WA3Chemistry.isChecked()&&!rb_Q4RAChemistry.isChecked()){
-            Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
-        }
-        else {
             Intent i = new Intent(this, ChemistryQ3Activity.class);
             setResult(RESULT_OK,i);
             finish();
-        }
     }
     public void rb_choose(View v){
         if(sound){

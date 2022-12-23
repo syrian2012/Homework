@@ -2,6 +2,7 @@ package svu.org.homework;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Application;
 import android.content.Context;
@@ -23,6 +24,9 @@ public class HomeActivity extends AppCompatActivity {
     String username;
     boolean sound;
     SharedPreferences sp;
+    ConstraintLayout rl;
+    TextView tv_choose;
+    Button bt_chemistry,bt_it,bt_math,bt_physics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +36,43 @@ public class HomeActivity extends AppCompatActivity {
         sound = sp.getBoolean("Sound",true);
         mp = MediaPlayer.create(this, R.raw.soho);
         username = getIntent().getStringExtra("username");
+        tv_choose=findViewById(R.id.tv_choose);
         tv_welcome = findViewById(R.id.tv_welcome);
         tv_welcome.setText("Welcome"+" "+ username );
+        rl =  findViewById(R.id.my_layout);
+        bt_chemistry = findViewById(R.id.bt_chemistry);
+        bt_it = findViewById(R.id.bt_it);
+        bt_math = findViewById(R.id.bt_math);
+        bt_physics = findViewById(R.id.bt_physics);
+        switch(sp.getString("Style","Style1")){
+            case "Style1":
+                tv_welcome.setTextColor(getColor(R.color.gold));
+                tv_choose.setTextColor(getColor(R.color.gold));
+                rl.setBackgroundColor(getColor(R.color.white));
+                bt_physics.setBackgroundColor(getColor(R.color.gold));
+                bt_chemistry.setBackgroundColor(getColor(R.color.gold));
+                bt_math.setBackgroundColor(getColor(R.color.gold));
+                bt_it.setBackgroundColor(getColor(R.color.gold));
+                break;
+            case "Style2":
+                tv_welcome.setTextColor(getColor(R.color.cyan));
+                tv_choose.setTextColor(getColor(R.color.cyan));
+                rl.setBackgroundColor(getColor(R.color.black));
+                bt_physics.setBackgroundColor(getColor(R.color.cyan));
+                bt_chemistry.setBackgroundColor(getColor(R.color.cyan));
+                bt_math.setBackgroundColor(getColor(R.color.cyan));
+                bt_it.setBackgroundColor(getColor(R.color.cyan));
+                break;
+            case "Style3":
+                tv_welcome.setTextColor(getColor(R.color.brown));
+                tv_choose.setTextColor(getColor(R.color.brown));
+                rl.setBackgroundColor(getColor(R.color.blue));
+                bt_physics.setBackgroundColor(getColor(R.color.brown));
+                bt_chemistry.setBackgroundColor(getColor(R.color.brown));
+                bt_math.setBackgroundColor(getColor(R.color.brown));
+                bt_it.setBackgroundColor(getColor(R.color.brown));
+                break;
+        }
     }
 
     @Override

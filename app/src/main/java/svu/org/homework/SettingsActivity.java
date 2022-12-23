@@ -1,6 +1,7 @@
 package svu.org.homework;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -19,6 +20,7 @@ public class SettingsActivity extends AppCompatActivity {
     RadioButton rb_style1,rb_style2,rb_style3;
     Button bt_apply;
     TextView tv_settings;
+    ConstraintLayout rl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class SettingsActivity extends AppCompatActivity {
         sound = sp.getBoolean("Sound",true);
         sw_sound = findViewById(R.id.sw_sound);
         sw_sound.setChecked(sound);
+        rl =  findViewById(R.id.my_layout);
         rb_style1 = findViewById(R.id.rb_style1);
         rb_style2 = findViewById(R.id.rb_style2);
         rb_style3 = findViewById(R.id.rb_style3);
@@ -42,6 +45,7 @@ public class SettingsActivity extends AppCompatActivity {
                 rb_style3.setTextColor(getColor(R.color.gold));
                 bt_apply.setBackgroundColor(getColor(R.color.gold));
                 tv_settings.setTextColor(getColor(R.color.gold));
+                rl.setBackgroundColor(getColor(R.color.white));
                 break;
             case "Style2":
                 rb_style2.setChecked(true);
@@ -51,6 +55,7 @@ public class SettingsActivity extends AppCompatActivity {
                 rb_style3.setTextColor(getColor(R.color.cyan));
                 bt_apply.setBackgroundColor(getColor(R.color.cyan));
                 tv_settings.setTextColor(getColor(R.color.cyan));
+                rl.setBackgroundColor(getColor(R.color.black));
                 break;
             case "Style3":
                 rb_style3.setChecked(true);
@@ -60,6 +65,7 @@ public class SettingsActivity extends AppCompatActivity {
                 rb_style3.setTextColor(getColor(R.color.brown));
                 bt_apply.setBackgroundColor(getColor(R.color.brown));
                 tv_settings.setTextColor(getColor(R.color.brown));
+                rl.setBackgroundColor(getColor(R.color.blue));
                 break;
         }
         sw_sound.setOnClickListener(new View.OnClickListener(){

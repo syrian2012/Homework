@@ -83,7 +83,7 @@ public class ChemistryQ1Activity extends AppCompatActivity {
                 tv_2.setTextColor(getColor(R.color.brown));
                 tv_3.setTextColor(getColor(R.color.brown));
                 bt_next.setBackgroundColor(getColor(R.color.brown));
-                rl.setBackgroundColor(getColor(R.color.gold));
+                rl.setBackgroundColor(getColor(R.color.blue));
                 break;
         }
     }

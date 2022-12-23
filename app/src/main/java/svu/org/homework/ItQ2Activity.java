@@ -55,14 +55,9 @@ public class ItQ2Activity extends AppCompatActivity {
     public void btnClickBack(View V){
         if(sound){
         mp.start();}
-        if (!rb_Q2WA1It.isChecked()&&!rb_Q2WA2It.isChecked()&&!rb_Q2WA3It.isChecked()&&!rb_Q2RAIt.isChecked()){
-            Toast.makeText(getApplicationContext(),"Please choose an answer to go to another question",Toast.LENGTH_LONG).show();
-        }
-        else {
             Intent i = new Intent(this, ItQ1Activity.class);
             setResult(RESULT_OK,i);
             finish();
-        }
     }
     public void rb_choose(View v){
         if(sound){
